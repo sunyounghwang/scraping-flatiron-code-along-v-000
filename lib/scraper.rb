@@ -18,6 +18,8 @@ class Scraper
     get_courses.each do |e|
       course = Course.new
       course.title = e.css("h2").text
+      course.schedule = e.css(".date").text
+      course.description = e.css
     end
   end
 
